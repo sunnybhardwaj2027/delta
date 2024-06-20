@@ -219,3 +219,24 @@ const calculator = {
 console.log(calculator.num); // 55
 console.log (calculator.add);
 console.log (calculator.add(1,3)); // 4
+
+
+// higher order function -- returns a function
+
+function oddEvenTest(request){
+    if (request == "odd"){
+        return function(n){
+            console.log(!(n % 2 == 0));
+        }
+    } else if (request == "even"){
+        return function(n){
+            console.log(n % 2 == 0);
+        }
+    } else {
+        console.log("wrong request");
+    }
+}
+
+let x = oddEvenTest("even");
+x(3);
+
