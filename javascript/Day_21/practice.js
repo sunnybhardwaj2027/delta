@@ -99,6 +99,26 @@ console.log([1, 2, 3, 4].some((el) => (el % 2 == 0))); // true
 console.log([1, 3].some((el) => (el % 2 == 0))); // false
 
 
+// 6. reduce methods
+
+let final = [1, 2, 3, 4].reduce((res, el) => (res + el));
+console.log(final);
+
+// finding maximum in array (reduce method)
+
+let numms = [2, 3, 4, 5, 3, 4, 7, 8, 1, 2];
+
+let max = numms.reduce((max, el) => {
+    if (el > max){
+        return el;
+    } else {
+        return max;
+    }
+});
+
+console.log(max);
+
+
 
 
 
