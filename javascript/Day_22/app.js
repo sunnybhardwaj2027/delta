@@ -37,4 +37,12 @@ console.log(para.innerText);
 console.log(para.textContent);
 console.log(para.innerHTML);
 
+let heading = document.querySelector("h1");
+
+heading.innerText = "i am peter parker";
+heading.innerText = "<b>Spider - Man</b>"; // -- this will print '<b>Spider - Man</b>' as it is so we can't use innerText for this purpose.
+
+heading.innerHTML = `<u>${heading.innerText}</u>`; // -- this will make whatever text is written in h1 will be underlined.
+
+heading.innerText = "Spider-Man";
 
