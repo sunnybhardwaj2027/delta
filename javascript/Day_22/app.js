@@ -46,3 +46,80 @@ heading.innerHTML = `<u>${heading.innerText}</u>`; // -- this will make whatever
 
 heading.innerText = "Spider-Man";
 
+// manipulating attributes
+
+let img = document.querySelector("img");
+console.log(img);
+
+console.log(img.getAttribute("id")); // mainImg
+img.setAttribute("id", "spidermanImg");
+console.log(img.getAttribute("id")); // spidermanImg
+
+img.setAttribute("id", "mainImg");
+
+console.log(img.getAttribute("class")); // null
+img.setAttribute("class", "images");
+
+console.log(img.getAttribute("class"));
+img.setAttribute("class", null);
+
+console.log(img.getAttribute("class"));
+
+// manipulating style
+
+let heading1 = document.querySelector("h1");
+console.dir(heading1);
+console.dir(heading1.style);
+
+// heading.style.color = "red";
+
+let links = document.querySelectorAll(".box a");
+console.dir(links);
+
+for(link of links){
+    link.style.color = "red";
+}
+
+// note -- jab hm javascript mein style khol ke dekhenge jaake to jo property css mein hmne set kar ke rkhi hai wo nhi dikhegi wha pe wha pe sirf whi style dikhti hai jo hmne inline mein set kri hai isiliye isko jyada use nhi krte hm
+
+// classList property -- this will give an array of classes -- we use this property to manipulate styling
+
+let headClass = document.querySelector("h1");
+console.dir(headClass.classList); // length - 0 -- because there is no class 
+
+headClass.classList.add("green"); // added a class property for h1 element.
+console.dir(headClass.classList);
+headClass.classList.add("underline"); // added second class property for h1 element.
+
+console.dir(headClass.classList);
+
+headClass.classList.remove("green"); // removed green class
+console.log(headClass.classList.contains("green")); // false -- this will check that 'green' class is available or not.
+
+console.log(headClass.classList.contains("underline")); // true
+
+// note -- in case of class we don't use setAttribute because setAttribute that remove all the previous class and sets this one .
+
+headClass.classList.toggle("green"); // this will add "green" class because there was no green class availble
+headClass.classList.toggle("underline"); // this will remove "underline" class because there was underline class available. basically it toggles .
+
+console.log(headClass.classList); // green
+
+// Navigation 
+// parentElement
+
+let h4 = document.querySelector("h4");
+console.log(h4.parentElement); // div
+
+// children
+console.log(h4.children); // HTMLcollection [] -- bcoz ther is no children of h4.
+let box = document.querySelector(".box");
+console.log(box.children); // HTMLcollection [2] [h4, ul]
+console.log(box.childElementCount); // 2
+
+// previousElementSibling/nextElementsibling
+
+let imge = document.querySelector("img");
+console.log(imge.previousElementSibling); // h1
+imge.previousElementSibling.style.color = "orange";
+
