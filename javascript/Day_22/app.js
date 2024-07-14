@@ -123,3 +123,49 @@ let imge = document.querySelector("img");
 console.log(imge.previousElementSibling); // h1
 imge.previousElementSibling.style.color = "orange";
 
+// adding elements -- for adding elements first we have to create element then append it.
+
+let newP = document.createElement("p"); // when we will appen this element then this will be visible in html documents.
+newP.innerText = "Hi, i am new P";
+
+let body = document.querySelector("body");
+body.appendChild(newP); // in the last of body this element will be.
+
+let box2 = document.querySelector(".box");
+box2.appendChild(newP); // now that newP will move in the last box.
+
+let btn = document.createElement("button");
+btn.innerText = "click me!";
+box2.appendChild(btn);
+
+// append(element)
+newP.append(" this is new text."); // by use append we can change in element.
+newP.append(btn); // now button is child of new which means button is in newp.
+
+newP.append("don't click me!");
+
+// prepend(element)
+
+box2.prepend(newP); // by use of prepend now new will be in starting of box.
+
+// insertAdgacentElement(element)
+
+/*
+'beforebegin': Before the targetElement itself.
+'afterbegin': Just inside the targetElement, before its first child.
+'beforeend': Just inside the targetElement, after its last child.
+'afterend': After the targetElement itself.
+*/
+
+let P = document.querySelector("p");
+P.insertAdjacentElement("beforebegin", btn);
+P.insertAdjacentElement("afterbegin", btn);
+P.insertAdjacentElement("beforeend", btn);
+P.insertAdjacentElement("afterend", btn);
+
+// removing elements
+
+body.removeChild(btn);
+P.insertAdjacentElement("afterend", btn);
+btn.remove();
+newP.remove();
