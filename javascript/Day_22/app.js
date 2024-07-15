@@ -169,3 +169,37 @@ body.removeChild(btn);
 P.insertAdjacentElement("afterend", btn);
 btn.remove();
 newP.remove();
+
+// practice ques
+// 1. a <p> with red text that says "Hey i am red!"
+
+let pRed = document.createElement("p");
+pRed.innerText = "Hey i'm red!";
+pRed.style.color = "red";
+
+body.appendChild(pRed);
+
+// 2. an <h3> with blue text that says "i'am blue h3!";
+
+let h3 = document.createElement("h3");
+h3.innerText = "i'm blue h3!";
+h3.style.color = "blue";
+body.appendChild(h3);
+
+// 3. a <div> with black border and pink background color and following elements inside it.
+//. another h1 that says "i am in div"
+// a p that says "ME TOO!"
+
+let div = document.createElement("div");
+body.appendChild(div);
+div.classList.add("practice");
+div.style.backgroundColor = "pink";
+div.style.border = "1px solid black";
+
+let pr = document.createElement("p");
+div.appendChild(pr);
+pr.innerText = "i'm in div";
+
+let h1 = document.createElement("h1");
+div.appendChild(h1);
+h1.innerText = "ME TOO!";
