@@ -8,6 +8,8 @@ btn.addEventListener("click", function() {
     let div = document.querySelector("div");
     div.style.backgroundColor = randomColor;
 
+    h3.style.color = randomColor;
+
     console.log("color updated");
 });
 
