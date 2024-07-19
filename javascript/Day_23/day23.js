@@ -50,7 +50,6 @@ function changeColor(){
     console.dir(this.innerText)
     this.style.backgroundColor = "blue";
 };
-
 ps.addEventListener("click", changeColor);
 h1.addEventListener("click", changeColor);
 h3.addEventListener("click", changeColor);
