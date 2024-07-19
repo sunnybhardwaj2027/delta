@@ -62,3 +62,20 @@ form2.addEventListener("submit", function (event){
     */
    // this is same we did on upper part.
 });
+
+
+// more events
+// change event
+
+let inp = document.querySelector("#more");
+
+inp.addEventListener("change", function(){
+    console.log("change event");
+    console.log("final value = ", this.value);
+});
+
+
+inp.addEventListener("input", function(){
+    console.log("input event");
+    console.log(this.value);
+})
