@@ -1,0 +1,21 @@
+body {
+    height: 2000px;
+}
+
+
+#mouseout {
+    height: 100px;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    background-color: pink;
+}
+
+#message {
+    position: fixed; /* Keep the message fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: yellow;
+    text-align: center;
+}
