@@ -130,7 +130,7 @@ console.log(studentt.getInfo2());
 
 // practice ques
 
-// 1. write an arrow function that returns the square of a number.
+// 1. write an arrow function that returns the square of a number..
 
 let square = (n) => (n * n);
 console.log(square(11));

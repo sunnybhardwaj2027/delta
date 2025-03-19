@@ -1,4 +1,4 @@
-// trim method 
+s// trim method 
 
 let str = "   mess   ";
 console.log(str.trim());
